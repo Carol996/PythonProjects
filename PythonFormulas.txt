@@ -1,0 +1,135 @@
+#1. assign a string to a variable
+
+mystring = 'silly string'
+
+
+
+
+#2. multiline string
+multi = ''' this string,
+has separate lines
+built up within.'''
+
+
+
+
+#3. an array
+slc = 'stringy test'
+print (slc[2:12])
+ringy test
+
+
+
+#4. using len
+len (mystring)
+12
+
+
+
+#5. using strip()
+strip = '     spaces out  '
+print (strip.strip())
+spaces out
+
+
+
+#6. using upper()
+upp = slc.upper()
+print(upp)
+STRINGY TEST
+
+
+
+#7. in & not in keywords
+cars = ['Toyota', 'VW', 'BMW']
+if 'VW' in cars:
+    print('yes')
+yes
+
+
+x = False
+print (not x)
+True
+
+
+
+#8. concatenate strings
+a = 'now we will'
+b = 'join together'
+print (a + ' ' + b)
+now we will join together
+
+
+
+#9. using a scape character
+txt = 'this is a \"escape\" character'
+print (txt)
+this is a "escape" character
+----------------------------------------
+
+#1 an arithmetic operator
+print (4 + 1)
+5
+
+
+#2 an assignment operator
+y = 5
+y += 2
+print (y)
+7
+y -= 3
+print (y)
+4
+
+
+
+#3 a comparison operator
+y = 1
+z = 20
+print (y > z)
+False
+
+
+#4 a logical operator
+y = 1
+z = 20
+print (y > 0 and y < z)
+True
+
+
+#5 an identity operator
+y = 1
+z = 20
+print (y is not z)
+True
+print (y is y)
+True
+print (y is z)
+False
+
+
+#6 a membership operator
+p = ['lilac', 'red', 'green']
+print ('red' in p)
+True
+print ('blue' in p)
+False
+-----------------------------------------
+
+animal = ('zebra', 'alligator', 'giraffe', 'goat', 'ox')
+listofAnimals = list(animal)
+print (listofAnimals)
+['zebra', 'alligator', 'giraffe', 'goat', 'ox']
+listofAnimals.append ('honey badger')
+print (listofAnimals)
+['zebra', 'alligator', 'giraffe', 'goat', 'ox', 'honey badger']
+
+
+newStr = 'hi nice 2 meet u'
+newestStr = list (newStr)
+print (newestStr)
+['h', 'i', ' ', 'n', 'i', 'c', 'e', ' ', '2', ' ', 'm', 'e', 'e', 't', ' ', 'u']
+newestStr = newStr.split (' ')
+print(newestStr)
+['hi', 'nice', '2', 'meet', 'u']
+-----------------------------------------

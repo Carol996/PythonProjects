@@ -1,0 +1,232 @@
+#1 create a list
+sample = ['Iceland', 'Thailand', 'Spain']
+print (sample)
+['Iceland', 'Thailand', 'Spain']
+
+
+#2 loop through a list with a for loop
+for s in sample:
+    print(s)
+    
+Iceland
+Thailand
+Spain
+
+
+#3 append method
+sample.append ('Mexico')
+
+print (sample)
+['Iceland', 'Thailand', 'Spain', 'Mexico']
+
+
+
+#4 copying a list
+sample = ['WA', 'FL', 'TX', 'CA']
+print (sample)
+['WA', 'FL', 'TX', 'CA']
+
+r = sample.copy()
+print(r)
+['WA', 'FL', 'TX', 'CA']
+
+
+
+
+#5 concatenating 2 lists
+lista = ['Testing', 'concatenation']
+listb = ['of', 'lists']
+listc = lista + listb
+
+print (listc)
+['Testing', 'concatenation', 'of', 'lists']
+
+
+
+#6 reverse method
+sample = ['WA', 'FL', 'TX', 'CA']
+sample.reverse()
+print (sample)
+['CA', 'TX', 'FL', 'WA']
+-------------------------------------------------
+
+#1 tuples are in (), lists in []
+
+tuple1 = ('apples', 'oranges', 'cherries')
+print (tuple1)
+('apples', 'oranges', 'cherries')
+
+
+
+
+#2 looping thru tuple w for loop
+for t in tuple1:
+    print (t)
+
+    
+apples
+oranges
+cherries
+
+
+
+#3 count() method
+z = tuple1.count('apples')
+print (z)
+1
+------------------------------------------------
+
+#sets are unindexed, presented in {}
+#sets cannot be changed or edited, can add/remove items
+
+#1 creating a set
+myset = {'red', 'purple', 'green'}
+print (myset)
+{'purple', 'red', 'green'}
+
+
+
+
+#2 remove() method to remove an item
+myset.remove('red')
+print (myset)
+{'purple', 'green'}
+
+
+
+
+#3 difference() method
+seta = {'tacos', 'nachos', 'salsa'}
+setb = {'tacos', 'burritos', 'birria', 'cilantro'}
+
+c = seta.difference(setb)
+print (c)
+{'nachos', 'salsa'}
+-------------------------------------------------
+
+#1 creating a dictionary
+
+cars = {
+    'brand': 'Toyota',
+    'model': 'Corolla S',
+    'year': '2014'
+    }
+print(cars)
+{'brand': 'Toyota', 'model': 'Corolla S', 'year': '2014'}
+
+
+
+
+#2 get() for dictionaries
+
+cars = {
+    'brand': 'Toyota',
+    'model': 'Corolla S',
+    'year': '2014'
+    }
+x = cars.get('year')
+print(x)
+2014
+
+
+
+#3 change a value in a dictionary
+
+cars = {
+    'brand': 'Toyota',
+    'model': 'Corolla S',
+    'year': '2014'
+    }
+cars['year'] = 2018
+print(cars)
+{'brand': 'Toyota', 'model': 'Corolla S', 'year': 2018}
+
+
+
+
+#4 adding an item to a dictionary
+cars = {
+    'brand': 'Toyota',
+    'model': 'Corolla S',
+    'year': '2014'
+    }
+cars['transmission'] = 'automatic'
+print(cars)
+{'brand': 'Toyota', 'model': 'Corolla S', 'year': '2014', 'transmission': 'automatic'}
+
+
+
+
+#5 creating a nested dictionary
+cars = {
+    "car1" : {
+        'brand': 'Toyota',
+        'model': 'Corolla S',
+        'year': '2014'
+        },
+    "car2" : {
+        'brand' : 'Ford',
+        'model' : 'Escape',
+        'year' : '2019'
+        },
+    "car3" : {
+        'brand' : 'Honda',
+        'model' : 'Civic',
+        'year' : '2023'
+        }
+    }
+
+
+print(cars)
+{'car1': {'brand': 'Toyota', 'model': 'Corolla S', 'year': '2014'}, 'car2': {'brand': 'Ford', 'model': 'Escape', 'year': '2019'}, 'car3': {'brand': 'Honda', 'model': 'Civic', 'year': '2023'}}
+
+
+
+
+#6 fromkeys() method
+x = ('k1', 'k2', 'k3')
+y = 1
+newdic = dict.fromkeys(x, y)
+print(newdic)
+{'k1': 1, 'k2': 1, 'k3': 1}
+cars['transmission'] = 'automatic'
+print(cars)
+{'brand': 'Toyota', 'model': 'Corolla S', 'year': '2014', 'transmission': 'automatic'}
+
+
+
+
+#5 creating a nested dictionary
+cars = {
+    "car1" : {
+        'brand': 'Toyota',
+        'model': 'Corolla S',
+        'year': '2014'
+        },
+    "car2" : {
+        'brand' : 'Ford',
+        'model' : 'Escape',
+        'year' : '2019'
+        },
+    "car3" : {
+        'brand' : 'Honda',
+        'model' : 'Civic',
+        'year' : '2023'
+        }
+    }
+
+
+print(cars)
+{'car1': {'brand': 'Toyota', 'model': 'Corolla S', 'year': '2014'}, 'car2': {'brand': 'Ford', 'model': 'Escape', 'year': '2019'}, 'car3': {'brand': 'Honda', 'model': 'Civic', 'year': '2023'}}
+
+
+
+
+#6 fromkeys() method
+x = ('k1', 'k2', 'k3')
+y = 1
+newdic = dict.fromkeys(x, y)
+print(newdic)
+{'k1': 1, 'k2': 1, 'k3': 1}
+
+
