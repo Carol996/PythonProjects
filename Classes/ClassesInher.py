@@ -19,6 +19,8 @@ variable.printname()
 
 #child class numero 1
 class Tutors(Student):
+    classroom_id = ' '
+    classroom_size = '20' 
     pass
 
 
