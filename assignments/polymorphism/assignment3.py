@@ -9,7 +9,7 @@ class Person:
     def getProfile(self):
         Pname = input('Name: ')
         Ppin = input('PIN: ')
-        if (Pname == self.name and Ppin == pin):
+        if (Pname == self.name and Ppin == self.pin):
             print('Welcome {}'.format(Pname))
         else:
             print('Sorry {}, check your PIN again')
@@ -17,31 +17,31 @@ class Person:
 
 #child1; inherits information from parent
 class ph_rate(Person):
-    name = 'Lucas'
+    user = '00000'  #replaced 'name' with 'userID'
     birth_month = '12'
 
     def getProfile(self):
-        Pname = input('Name: ')
+        User = input('User ID: ')
         BMonth = input('Birthday Month: ')
-        if (Pname == self.name and BMonth == birth_month):
-            print('Welcome {}'.format(Pname))
+        if (User == self.user and BMonth == self.birth_month):
+            print('Welcome')
         else:
-            print('Sorry {}, check your information again'.format(Pname))
+            print('Sorry, check your information again')
 
 
 #child2
 #inherits information from parent
 class c_rate(Person):
-    name = 'Lucas'
+    codewrd = 'Penny' #replaced 'name' with 'codewrd'
     birthPlc = 'CA'
 
     def getProfile(self):
-        Pname = input('Name: ')
+        CodeWrd = input('Code Word: ')
         BPlc = input('In two letter format, type the state you were born in\nBirth Place: ')
-        if (Pname == self.name and BPlc == birthPlc):
-            print('Welcome {}'.format(Pname))
+        if (CodeWrd == self.codewrd and BPlc == self.birthPlc):
+            print('Welcome!')
         else:
-            print('Sorry {}, check your information again'.format(Pname))
+            print('Sorry, check your information again')
     
 
 
