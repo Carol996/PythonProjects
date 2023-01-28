@@ -1,5 +1,3 @@
-
-
 #import the ABC method from abc, as well as abstractmethod
 from abc import ABC, abstractmethod
 
@@ -12,30 +10,22 @@ from abc import ABC, abstractmethod
 
 #parent class defines its method as abstract by 'mentioning' @abstractmethod
 class Total(ABC):
+
+    def Receipt(self, amount):
+        print('Your total is: $',amount)
+        
+    
+
     @abstractmethod
     def Cash (self, amount):
         pass
 
 
-#child class inherits Cash from parent abstract
-class Withdrawal(Total):
+class Purchase(Total):
     def Cash(self, amount):
-        if amount > 500:
-            print('Your withdrawal amount of {} exceeds the maximum withdrawal amount of $500.'.format(amount))
-        else:
-            print('Your withdrawal of {} has been completed. Thank you.'.format(amount))
-
-#child class 2 inherits Cash from parent
-class Deposit(Total):
-    def Cash(self, amount):
-        if amount > 1000:
-            x = amount - 1000
-            print('You can only deposit a maximum of 1000 per day. Please take the remaining {}.'.format(x))
-        else:
-            print('Your deposit of {} dollars has been completed. Thank you.'.format(amount))
+        print('Your purchase has been completed successfully.')
 
 
-
-obj = Deposit()
-obj.Cash(400)
-
+obj = Purchase()
+obj.Receipt(200)
+obj.Cash(200)
