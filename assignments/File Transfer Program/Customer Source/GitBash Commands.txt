@@ -1,0 +1,23 @@
+Git Commands
+
+> git branch -a ................... lists all branches
+> git branch [branchname] ......... creates a branch
+> git checkout [branchname]........ switches branches
+> git branch -d [branchname] ...... deletes a branch
+> git merge [branchname] .......... merges changes from one branch into current
+> ls .............................. lists all files/folders
+> cd .............................. lists what folder I'm in
+> git init ........................ initializes something
+> -a .............................. all
+> - m ............................. 
+> git add ......................... adds file so it can be tracked
+> git status ...................... shows whether files need commit
+> git commit ...................... commits files ("saves" changes)
+> git log ......................... shows the most current commit
+> mkdir [dirname] ................. creates a new directory
+> mv [filename] [dirname] ......... moves a file to a directory
+> mv [filename] [NEWfilename] ..... renames a file
+> touch [filename] ................ 
+> cat [filename] .................. display what changes were made in a file
+> pwd ............................. lists current folder
+> cd "_________" .................. changes me to the directory in blank\

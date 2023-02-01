@@ -11,6 +11,9 @@ import tkinter.filedialog
 
 import os
 import shutil
+import time
+import datetime
+from datetime import datetime, timedelta
 
 
 
@@ -46,6 +49,7 @@ class ParentWindow(Frame):
         self.exit_btn = Button(text="Exit", width=20, command=self.exit_program)
         self.exit_btn.grid(row=2, column=2, padx=(10, 40), pady=(0, 15))
 
+
     #creates function to select src dir
     def sourceDir(self):
         selectSourceDir = tkinter.filedialog.askdirectory()
@@ -55,6 +59,7 @@ class ParentWindow(Frame):
         #the .insert method will insert the user selection to the source_dir Entry
         self.source_dir.insert(0, selectSourceDir)
 
+
     #creates function to select dest dir
     def destDir(self):
         selectDestDir = tkinter.filedialog.askdirectory()
@@ -62,6 +67,34 @@ class ParentWindow(Frame):
         self.destination_dir.insert(0, selectDestDir)
 
 
+    def transferFiles(self):
+        #gets source dir, lists source files
+        source = self.source_dir.get()
+        source_files = os.listdir(source)
+
+        #gets dest dir
+        destination = self.destination_dir.get()
+
+
+        #runs thru each file in source dir
+        for i in source_files:
+
+            #defines vars for current time minus 24 hrs
+            t = datetime.datetime.now()
+            cutoff = t - timedelta(hours=24)
+
+            #defines var for file's timestamp
+            mtime = os.path.getmtime(i)
+
+            #transfers files if their timestamp is less than or equal to 24 hrs
+            if mtime <= cutoff:
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred')      
+
+    
+
+
+    '''  ORIGINAL CODE BELOW
 
     #creates function to transfer files from one directory to another
     def transferFiles(self):
@@ -76,16 +109,15 @@ class ParentWindow(Frame):
         for i in source_files:
             #moves each file from src to dest
             shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+            print(i + ' was successfully transferred.')'''            
+    
 
-
+      
     #creates function to exit program
     def exit_program(self):
         root.destroy()
 
-
-    
-        
+           
 
 
 
