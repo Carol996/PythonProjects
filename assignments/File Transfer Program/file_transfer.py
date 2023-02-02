@@ -80,36 +80,23 @@ class ParentWindow(Frame):
         for i in source_files:
 
             #defines vars for current time minus 24 hrs
-            t = datetime.datetime.now()
+            t = datetime.now()
             cutoff = t - timedelta(hours=24)
 
             #defines var for file's timestamp
-            mtime = os.path.getmtime(i)
+            mtime = os.path.getmtime(source + '/' + i)
+
+            #converts mtime to datetime format
+            converted = datetime.fromtimestamp(mtime)
+
+
 
             #transfers files if their timestamp is less than or equal to 24 hrs
-            if mtime <= cutoff:
+            if converted >= cutoff:
                 shutil.move(source + '/' + i, destination)
                 print(i + ' was successfully transferred')      
 
-    
-
-
-    '''  ORIGINAL CODE BELOW
-
-    #creates function to transfer files from one directory to another
-    def transferFiles(self):
-        #gets source and dest dir
-        source = self.source_dir.get()
-        destination = self.destination_dir.get()
-
-        #gets list of files in the src dir
-        source_files = os.listdir(source)
-
-        #runs through each file in the source dir
-        for i in source_files:
-            #moves each file from src to dest
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')'''            
+               
     
 
       
